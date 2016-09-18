@@ -1,0 +1,30 @@
+{
+  "name": "currentvisitor2mackerel",
+  "description": "Post current visitor by Google Analytics to mackerel.io",
+  "env": {
+    "SERVICE_ACCOUNT_EMAIL": {
+      "description": "Google Cloud Platform Service Account Email Address.",
+      "value": "example@developer.gserviceaccount.com"
+    },
+    "PROFILE_ID": {
+      "description": "Google Analytics Profile ID.",
+      "value": "12345678"
+    },
+    "GOOGLE_API_KEY": {
+      "description": "Google Cloud Platform Service Account's RSA private key.",
+      "value": "-----BEGIN RSA PRIVATE KEY-----\nxxxx\n-----END RSA PRIVATE KEY-----"
+    },
+    "WEBSITE_NAME": {
+      "description": "Website name Google Analytics embedded.",
+      "value": "hoge-blog"
+    },
+    "MACKEREL_API_KEY": {
+      "description": "Your organization's api-key of mackerel.io.",
+      "value": ""
+    },
+    "MACKEREL_SERVICE_NAME": {
+      "description": "Service name in your mackerel organization.",
+      "value": "hoge-blog"
+    }
+  }
+}
