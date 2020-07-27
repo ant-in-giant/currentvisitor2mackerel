@@ -76,5 +76,8 @@ DEPENDENCIES
   google-api-client (~> 0.8.6)
   sinatra
 
+RUBY VERSION
+   ruby 2.4.0p0
+
 BUNDLED WITH
-   1.17.2
+   2.1.4

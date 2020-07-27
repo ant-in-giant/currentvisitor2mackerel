@@ -1,3 +1,5 @@
+ruby '2.4.0'
+
 # A sample Gemfile
 source "https://rubygems.org"
 
