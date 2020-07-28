@@ -15,7 +15,7 @@ get '/post' do
   # Get the Google API client
   client = Google::APIClient.new(
     :application_name => 'current visitor of Google Analytics post to mackerel.io',
-    :application_version => '0.0.1'
+    :application_version => '0.0.3'
   )
 
   key = OpenSSL::PKey::RSA.new(ENV['GOOGLE_API_KEY'].gsub("\\n", "\n"))
@@ -41,7 +41,7 @@ get '/post' do
 
   number = response.empty? ? 0 : response.first.first.to_i
   payload = [ {
-                 name: "#{ENV['WEBSITE_NAME']}.current_visitors",
+                 name: "#current_visitors.{ENV['WEBSITE_NAME']}",
                  time: Time.now.to_i,
                  value: number,
             } ].to_json
