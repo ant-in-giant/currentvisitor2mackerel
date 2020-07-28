@@ -41,7 +41,7 @@ get '/post' do
 
   number = response.empty? ? 0 : response.first.first.to_i
   payload = [ {
-                 name: "#current_visitors.{ENV['WEBSITE_NAME']}",
+                 name: "current_visitors.#{ENV['WEBSITE_NAME']}",
                  time: Time.now.to_i,
                  value: number,
             } ].to_json
