@@ -40,7 +40,7 @@ get '/post' do
   result_status = 0
   site_and_view_id_json.each do |site_and_view_id|
     site_and_view_id.each do |site, view_id|
-      #p "site=#{site}、viewId=#{viewId}"
+      #p "site=#{site}、view_id=#{view_id}"
 
       # Execute the query, get the value like `[["1"]]`
       response = client.execute(:api_method => analytics.data.realtime.get, :parameters => {
@@ -64,17 +64,16 @@ get '/post' do
           q.body = payload
         end
         res = https.request(req)
-        #headers 'Content-Type' => 'application/json'
-        #status res.code
-        #body "#{res.body}"
+
         responses.store("#{site}", :result => {:status => res.code, :body => "#{res.body}"})
         #result_status = [result_status, res.code].max
       end
     end
   end
 
-  content_type :json
-  status result_status
+  headers 'Content-Type' => 'application/json'
+  #status result_status
+  status 200  # TODO:
   resp = {
       body: responses,
   }
