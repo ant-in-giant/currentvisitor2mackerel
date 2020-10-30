@@ -66,26 +66,25 @@ get '/post' do
         res = https.request(req)
 
         responses.store("#{site}", :result => {:status => res.code, :body => "#{res.body}"})
-        #result_status = [result_status, res.code].max
+        result_status = [result_status, res.code.to_i].max
       end
     end
   end
 
   headers 'Content-Type' => 'application/json'
-  #status result_status
-  status 200  # TODO:
+  status result_status
   resp = {
       body: responses,
   }
   resp.to_json
 end
 
-get '/test' do
+get '/sites' do
   site_and_view_id_json = JSON.parse(ENV['SITE_AND_VIEW_ID_JSON'])
 
   site_and_view_id_json.each do |site_and_view_id|
     site_and_view_id.each do |site,view_id|
-      p "site=#{site}、viewId=#{view_id}"
+      p "site=#{site}, viewId=#{view_id}"
     end
   end
 
