@@ -6,17 +6,13 @@
       "description": "Google Cloud Platform Service Account Email Address.",
       "value": "example@developer.gserviceaccount.com"
     },
-    "PROFILE_ID": {
-      "description": "Google Analytics Profile ID.",
-      "value": "12345678"
-    },
     "GOOGLE_API_KEY": {
       "description": "Google Cloud Platform Service Account's RSA private key.",
       "value": "-----BEGIN RSA PRIVATE KEY-----\nxxxx\n-----END RSA PRIVATE KEY-----"
     },
-    "WEBSITE_NAME": {
-      "description": "Website name Google Analytics embedded.",
-      "value": "hoge-blog"
+    "SITE_AND_VIEW_ID_JSON": {
+      "description": "Website names (Google Analytics embedded) & Google Analytics View IDs.",
+      "value": "[{\"hoge-blog\":12345678},{\"fuga-blog\":23456789}]"
     },
     "MACKEREL_API_KEY": {
       "description": "Your organization's api-key of mackerel.io.",
