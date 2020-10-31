@@ -3,7 +3,8 @@
 ## v0.0.4
 2020.10.31
 - 複数サイトを１つの Heroku アプリでサービスメトリック採取できるように対応
-
+    - refs Pubs/Mackerel Ambassador (sogaoh) blogs/
+        - [GoogleAnalyticsで取得したアクティブユーザー数を定期的にMackerelサービスメトリックに投稿する (3)](https://esa-pages.io/p/sharing/6641/posts/1079/8c63300b0975e176ab31.html)
 
 ## v0.0.3
 2020.07.27
